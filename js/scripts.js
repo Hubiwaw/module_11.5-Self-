@@ -1,12 +1,12 @@
 $(document).ready(function() {
-	function Button() {
+	function Button(text) {
 		this.text = text || "Hello";
 	}
 	Button.prototype = {
 		create: function() {
 			var self = this;
 			this.$element = $("<button>");
-			this.$element = $(this.text);
+			this.$element.text(this.text);
 			this.$element.click(function(){
 				alert(self.text);
 			});
